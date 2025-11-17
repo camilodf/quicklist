@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+:root{
+    /*Colors Variables*/
+    /*Background*/
+    --background-primary: #F4F5FB;
+    --background-secondary: #FFFFFF;
+
+    /*Color*/
+    --color-brand: #CA3884;
+    --color-brand-hover: #A52C6B;
+    --color-danger: #C93847;
+
+    /*Content*/
+    --content-primary: #080B12;
+    --content-secondary: #374151;
+    --content-tertiary: #9CA3AF;
+    --always-white: #FFFFFF;
+
+    /*Border*/
+    --border-primary: #D1D5DB;
+    --border-secondary: #B9C2D0;
+
+    /*Texts-Variables*/
+    --title: 800 2.4rem/120% 'Inter', sans-serif;
+    --label: 600 1.6rem/140% 'Inter', sans-serif;
+    --paragraph: 600 2rem/140% 'Inter', sans-serif;
+    --link: 400 1.6rem/140% 'Inter', sans-serif;
+    --logo: 800 2rem/120% 'Sora', sans-serif;
+}
+
+body{
+    padding: 4rem 2rem;
+    background-color: var(--background-primary);
+}

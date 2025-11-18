@@ -47,7 +47,7 @@ header .container{
     border-radius: 1rem;
     border-color: var(--border-primary);
 
-    font: var(--input);
+    font: var(--label);
 }
 
 #input-item::placeholder{
@@ -58,10 +58,40 @@ header .container{
 
 #add-btn{
     height: 4.4rem;
+    margin-bottom: 2rem;
     border-radius: 1rem;
     border-color: var(--border-primary);
 
     font: var(--label);
     color: var(--always-white);
     background-color: var(--color-brand);
+}
+
+.list-itens{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.list-itens li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 4.4rem;
+    padding: 0 2rem;
+
+    font: var(--label);
+    background-color: var(--background-secondary);
+    border: 1px solid var(--border-primary);
+    border-radius: 1rem;
+}
+
+.info-tarefa{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
 }

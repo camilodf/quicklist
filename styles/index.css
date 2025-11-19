@@ -67,11 +67,19 @@ header .container{
     background-color: var(--color-brand);
 }
 
+#add-btn:hover{
+    background-color: var(--color-brand-hover);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
 .list-itens{
     list-style: none;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+
+    margin-bottom: 2rem;
 }
 
 .list-itens li{
@@ -89,6 +97,13 @@ header .container{
     border-radius: 1rem;
 }
 
+input[type="checkbox"] {
+    accent-color: var(--color-brand);
+    cursor: pointer; /* Mãozinha ao passar o mouse */
+    width: 1.5rem; 
+    height: 1.5rem;
+}
+
 .info-tarefa{
     display: flex;
     flex-direction: row;
@@ -97,5 +112,44 @@ header .container{
 }
 
 .list-itens .done {
-    background-color: red; /* Agora o vermelho vai aparecer! */
+    border: 3px solid var(--color-brand);
+
+    font-style: italic;
+    text-decoration: line-through;
+}
+
+.button-delete{
+    background-color: transparent;
+    width: 2rem;
+
+    border: none;
+}
+
+.alert-text {
+    /* Layout base (mantive o seu) */
+    display: none; 
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    height: 4.4rem;
+    background-color: var(--color-danger);
+    border: 1px solid var(--border-primary);
+    border-radius: 1rem;
+    font: var(--label);
+    color: var(--always-white);
+
+    /* --- A MÁGICA DA ANIMAÇÃO --- */
+    opacity: 0; /* Começa transparente */
+    transform: translateY(20px); /* Começa um pouco mais para baixo */
+    transition: opacity 0.5s, transform 0.5s; /* O tempo da suavidade */
+}
+
+/* Essa classe será adicionada pelo JS para mostrar o alerta */
+.alert-text.alert-open {
+    opacity: 1; /* Fica totalmente visível */
+    transform: translateY(0); /* Sobe para a posição original */
+}
+
+.alert-text .button-delete img{
+    filter: brightness(0) invert(1);
 }

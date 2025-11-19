@@ -95,3 +95,7 @@ header .container{
     align-items: center;
     gap: 2rem;
 }
+
+.list-itens .done {
+    background-color: red; /* Agora o vermelho vai aparecer! */
+}
